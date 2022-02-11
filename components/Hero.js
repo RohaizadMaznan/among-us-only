@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function Hero() {
@@ -12,16 +13,17 @@ function Hero() {
           🚀 Our team is still developing and improving the current website
         </span>
 
-        <a
-          href="/journey"
-          className="text-[#ED639E] hover:text-[#ca4c83] active:text-indigo-700 text-sm font-bold transition duration-100"
-        >
-          More
-        </a>
+        <Link href="/" passHref>
+          <a
+            className="text-[#ED639E] hover:text-[#ca4c83] active:text-indigo-700 text-sm font-bold transition duration-100"
+          >
+            More
+          </a>
+        </Link>
       </div>
 
       <div className="max-w-screen flex flex-col items-center text-center pt-8 lg:pt-20">
-        <h1 className="text-black-800 text-4xl sm:text-5xl md:text-6xl font-bold mb-8 md:mb-12">
+        <h1 className="text-gray-800 text-4xl sm:text-5xl md:text-6xl font-bold mb-8 md:mb-12">
           Let the secret stay unknown among us
         </h1>
 

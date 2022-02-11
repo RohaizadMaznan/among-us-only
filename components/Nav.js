@@ -1,39 +1,42 @@
+import Link from "next/link";
 import React from "react";
 
 function Nav() {
   return (
     <>
       <header className="flex justify-between items-center py-4 md:py-8 mb-4">
-        <a
-          href="/"
-          className="inline-flex items-center text-black-800 text-xl font-bold gap-2.5"
-          aria-label="logo"
-        >
-           🤞🏻 Among Us Only
-        </a>
+        <Link href="/" passHref>
+          <a
+            className="inline-flex items-center text-black-800 text-xl font-bold gap-2.5"
+            aria-label="logo"
+          >
+            🤞🏻 Among Us Only
+          </a>
+        </Link>
+
         <nav className="hidden lg:flex gap-12">
-          <a href="#" className="text-[#ED639E] text-lg font-semibold">
-            Archive
-          </a>
-          <a
-            href="#"
-            className="text-gray-600 hover:text-[#ED639E] text-lg font-semibold transition duration-100"
-          >
-            About
-          </a>
-          <a
-            href="#"
-            className="text-gray-600 hover:text-[#ED639E] text-lg font-semibold transition duration-100"
-          >
-            Journey 🚀
-          </a>
+          <Link href="/" passHref>
+            <a className="text-[#ED639E] text-lg font-semibold">Archive</a>
+          </Link>
+          <Link href="/about" passHref>
+            <a className="text-gray-600 hover:text-[#ED639E] text-lg font-semibold transition duration-100">
+              About
+            </a>
+          </Link>
+          <Link href="/journey" passHref>
+            <a className="text-gray-600 hover:text-[#ED639E] text-lg font-semibold transition duration-100">
+              Journey 🚀
+            </a>
+          </Link>
         </nav>
-        <a
-          href="#"
-          className="hidden lg:inline-block bg-[#4535AA] hover:bg-[#372994] focus-visible:ring ring-indigo-300 text-white active:text-gray-700 text-sm md:text-base font-semibold text-center rounded outline-none transition duration-100 px-8 py-3 shadow-md"
-        >
-          Submit
-        </a>
+        <Link href="/" passHref>
+          <button
+            type="button"
+            className="hidden lg:inline-block bg-[#4535AA] hover:bg-[#372994] focus-visible:ring ring-indigo-300 text-white active:text-gray-700 text-sm md:text-base font-semibold text-center rounded outline-none transition duration-100 px-8 py-3 shadow-md"
+          >
+            Submit
+          </button>
+        </Link>
 
         <button
           type="button"
