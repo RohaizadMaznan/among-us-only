@@ -46,7 +46,7 @@ function Nav() {
           </button>
         </Link>
 
-        <div className="relative inline-block text-left">
+        <div className="lg:hidden relative inline-block text-left">
           <div>
             <button
               type="button"
