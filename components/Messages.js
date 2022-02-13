@@ -21,7 +21,7 @@ export default function Messages({ messages }) {
                     className={`h-[420px] md:h-[390px] p-4 border-4 border-gray-800`}
                     style={{ "backgroundColor": `${message.cardColor}` }}
                   >
-                    <p className="filter invert text-4xl font-semibold">
+                    <p className="break-words leading-tight filter invert text-4xl font-semibold">
                       {message.message}
                     </p>
                   </div>
