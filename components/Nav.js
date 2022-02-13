@@ -46,7 +46,7 @@ function Nav() {
           </button>
         </Link>
 
-        <div className="lg:hidden relative inline-block text-left">
+        <div className="lg:hidden relative inline-block text-left z-10">
           <div>
             <button
               type="button"
@@ -77,7 +77,7 @@ function Nav() {
                   aria-orientation="vertical"
                   aria-labelledby="options-menu"
                 >
-                  <Link href="/archive" passHref>
+                  <Link href="/" passHref>
                     <a
                       className="block px-4 py-2 text-md text-gray-900 hover:bg-gray-100 hover:text-gray-900 "
                       role="menuitem"
