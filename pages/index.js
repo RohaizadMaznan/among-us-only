@@ -1,10 +1,11 @@
 import Head from "next/head";
-import useSWR, { SWRConfig, useSWRConfig } from "swr";
+import useSWR from "swr";
 import Hero from "../components/Hero";
 import Search from "../components/Search";
+import Messages from "../components/Messages";
 import { server } from "../config";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
 
 const fetcher = (url) => axios.get(url).then((res) => res.data);
@@ -15,13 +16,17 @@ function Home() {
   const [filters, setFilters] = useState({
     q: "",
   });
-  const { data, error } = useSWR(!q ? `${server}/posts` : `${server}/posts?name=${q}`, fetcher);
+  const { data, error } = useSWR(
+    !q ? `${server}/posts` : `${server}/posts?name=${q}`,
+    fetcher
+  );
   if (error) return "An error has occurred.";
   if (!data) return "Loading...";
 
   return (
     <div>
       <Search messages={data} filters={filters} setFilters={setFilters} />
+      <Messages messages={data} />
     </div>
   );
 }

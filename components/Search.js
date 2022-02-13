@@ -1,21 +1,12 @@
-import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React from "react";
 import { MdOutlineFilterList } from "react-icons/md";
-import Messages from "./Messages";
 
-function Search({ messages, filters, setFilters }) {
-  const router = useRouter();
-
-  function handleSearch(e, filters) {
-    e.preventDefault();
-    router.push(`/q=${filters}`);
-  };
+function Search({ messages, setFilters }) {
 
   return (
     <>
       <div className="pb-0 md:pb-10">
         <form
-          onSubmit={() => handleSearch(filters)}
           className="max-w-screen grid sm:grid-cols-2 gap-4 mx-auto"
         >
           <div className="sm:col-span-2 space-y-2">
@@ -37,9 +28,6 @@ function Search({ messages, filters, setFilters }) {
             </div>
           </div>
         </form>
-      </div>
-      <div>
-        <Messages messages={messages} />
       </div>
     </>
   );
