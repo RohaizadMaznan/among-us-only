@@ -2,12 +2,17 @@ import Link from "next/link";
 import React from "react";
 
 function Nav() {
+
+  function NoAvailable(){
+        alert("Not yet implement!")
+  }
+
   return (
     <>
       <header className="flex justify-between items-center py-4 md:py-8 mb-4">
         <Link href="/" passHref>
           <a
-            className="inline-flex items-center text-black-800 text-xl font-bold gap-2.5"
+            className="inline-flex items-center text-gray-800 text-xl font-bold gap-2.5"
             aria-label="logo"
           >
             🤞🏻 Among Us Only
@@ -16,15 +21,15 @@ function Nav() {
 
         <nav className="hidden lg:flex gap-12">
           <Link href="/" passHref>
-            <a className="text-[#ED639E] text-lg font-semibold">Archive</a>
+            <a className="text-gray-800 hover:text-[#ED639E] text-lg font-semibold">Archive</a>
           </Link>
           <Link href="/about" passHref>
-            <a className="text-gray-600 hover:text-[#ED639E] text-lg font-semibold transition duration-100">
+            <a  className="text-gray-800 hover:text-[#ED639E] text-lg font-semibold transition duration-100">
               About
             </a>
           </Link>
           <Link href="/journey" passHref>
-            <a className="text-gray-600 hover:text-[#ED639E] text-lg font-semibold transition duration-100">
+            <a  className="text-gray-800 hover:text-[#ED639E] text-lg font-semibold transition duration-100">
               Journey 🚀
             </a>
           </Link>

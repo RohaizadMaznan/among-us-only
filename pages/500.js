@@ -6,5 +6,5 @@ function Custom500() {
   )
 }
 
-Custom500.layout = "PUBLIC";
+Custom500.layout = "BLANK";
 export default Custom500

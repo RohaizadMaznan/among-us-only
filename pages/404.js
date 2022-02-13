@@ -6,5 +6,5 @@ function Custom404() {
   )
 }
 
-Custom404.layout = "PUBLIC";
+Custom404.layout = "BLANK";
 export default Custom404

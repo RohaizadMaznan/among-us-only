@@ -1,9 +1,10 @@
-import PublicLayout from "../components/Layout";
+import { PublicLayout, Blank } from "../components/Layout";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   const layouts = {
     PUBLIC: PublicLayout,
+    BLANK: Blank,
   };
 
   const Layout = layouts[Component.layout] || ((children) => <>{children}</>);
