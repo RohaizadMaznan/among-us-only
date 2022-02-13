@@ -7,7 +7,7 @@ export default function Messages({ messages }) {
       {messages.map((message, index) => {
         return (
           <React.Fragment key={index}>
-            <Link href={`/posts/${message.id}`} passHref>
+            <Link href={`/posts/${message._id}`} passHref>
               <div
                 className={`w-[440px] h-[496px] m-2 bg-gray-50 border-4 border-gray-800 cursor-pointer`}
               >
