@@ -13,7 +13,7 @@ function Hero() {
           🚀 Our team is still developing and improving the current website
         </span>
 
-        <Link href="/" passHref>
+        <Link href="/journey" passHref>
           <a
             className="text-[#ED639E] hover:text-[#ca4c83] active:text-indigo-700 text-sm font-bold transition duration-100"
           >

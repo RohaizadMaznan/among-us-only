@@ -32,16 +32,16 @@ function PostID({ message }) {
       <>
         <div className="max-w-3xl m-auto grid grid-cols-1 justify-items-center">
           <div
-            className={`w-[370px] h-[390px] md:w-[672px] md:h-[758px] m-2 bg-gray-50 border-4 border-gray-800 cursor-pointer`}
+            className={`w-[390px] h-[500px] md:w-[672px] md:h-[758px] m-2 bg-gray-50 border-4 border-gray-800 cursor-pointer`}
           >
-            <div className="h-[36px] px-3 pt-1 ">
+            <div className="md:h-[36px] px-3 pt-1 ">
               <p className="text-xl md:text-4xl font-semibold">
                 To: {message[0].sendToName}
               </p>
             </div>
             <div className="px-3 md:py-2">
               <div
-                className={`h-[310px] md:h-[648px] p-4 border-4 border-gray-800`}
+                className={`h-[420px] md:h-[648px] p-4 border-4 border-gray-800`}
                 style={{ backgroundColor: `${message[0].cardColor}` }}
               >
                 <p className="filter invert text-xl md:text-6xl font-semibold">
@@ -50,7 +50,7 @@ function PostID({ message }) {
               </div>
             </div>
             <div className="flex justify-between items-center px-3">
-              <p className="text-lg md:text-3xl font-semibold">#amongusonly</p>
+              <p className="text-2xl md:text-3xl font-semibold">#amongusonly</p>
               <p className="text-lg md:text-xl font-semibold">Download card</p>
             </div>
           </div>
