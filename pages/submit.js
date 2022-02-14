@@ -1,5 +1,6 @@
 import axios from "axios";
 import { route } from "next/dist/server/router";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { useToasts } from "react-toast-notifications";
@@ -57,92 +58,101 @@ function Submit() {
   };
 
   return (
-    <div className="bg-white py-6 sm:py-8 lg:py-12">
-      <div className="max-w-screen-2xl px-4 md:px-8 mx-auto">
-        <div className="mb-10 md:mb-16">
-          <h2 className="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
-            Express and submit
-          </h2>
+    <>
+      <Head>
+        <title>Submit a Card | Among Us Only | Secret Message for Loved One Stay Secret</title>
+        <meta name="description" content="Submit a Card | Among Us Only | Secret Message for Loved One Stay Secret" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="bg-white py-6 sm:py-8 lg:py-12">
+        <div className="max-w-screen-2xl px-4 md:px-8 mx-auto">
+          <div className="mb-10 md:mb-16">
+            <h2 className="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
+              Express and submit
+            </h2>
 
-          <p className=" max-w-screen-md text-gray-600 md:text-lg text-center mx-auto">
-            The Among Us Only will allow you to share your feeling and express
-            it without noticing the person. Truely anonymous from people all
-            over the world. This project was dedicated to display an emotion
-            catching with their first love. The content of submission are wide
-            ranging, encompassing just about every emotion.
-          </p>
-        </div>
-        <form
-          onSubmit={handleSubmit}
-          className="max-w-screen-md grid sm:grid-cols-2 gap-4 mx-auto"
-        >
-          <div className="sm:col-span-2">
-            <label
-              htmlFor="name"
-              className="inline-block text-gray-800 text-sm sm:text-base mb-2"
-            >
-              Name you are sending to*
-            </label>
-            <input
-              required
-              name="name"
-              value={form?.name}
-              onChange={handleChange}
-              className="w-full text-lg bg-gray-50 text-gray-800 border rounded outline-none transition duration-100 px-3 py-2"
-            />
+            <p className=" max-w-screen-md text-gray-600 md:text-lg text-center mx-auto">
+              The Among Us Only will allow you to share your feeling and express
+              it without noticing the person. Truely anonymous from people all
+              over the world. This project was dedicated to display an emotion
+              catching with their first love. The content of submission are wide
+              ranging, encompassing just about every emotion.
+            </p>
           </div>
+          <form
+            onSubmit={handleSubmit}
+            className="max-w-screen-md grid sm:grid-cols-2 gap-4 mx-auto"
+          >
+            <div className="sm:col-span-2">
+              <label
+                htmlFor="name"
+                className="inline-block text-gray-800 text-sm sm:text-base mb-2"
+              >
+                Name you are sending to*
+              </label>
+              <input
+                required
+                name="name"
+                value={form?.name}
+                onChange={handleChange}
+                className="w-full text-lg bg-gray-50 text-gray-800 border rounded outline-none transition duration-100 px-3 py-2"
+              />
+            </div>
 
-          <div className="sm:col-span-2">
-            <label
-              htmlFor="message"
-              className="inline-block text-gray-800 text-sm sm:text-base mb-2"
-            >
-              Message*
-            </label>
-            <textarea
-              required
-              name="message"
-              value={form?.message}
-              onChange={handleChange}
-              className="w-full text-lg bg-gray-50 text-gray-800 border rounded outline-none transition duration-100 px-3 py-2"
-              rows="3"
-              maxLength={form.chars_left}
-            ></textarea>
-            <span className="flex justify-end">
-              {form.chars_left - form.message.length}{" "}
-              {form.message.length > (form.chars_left - 2) ? "character" : "characters"} left
-            </span>
-          </div>
+            <div className="sm:col-span-2">
+              <label
+                htmlFor="message"
+                className="inline-block text-gray-800 text-sm sm:text-base mb-2"
+              >
+                Message*
+              </label>
+              <textarea
+                required
+                name="message"
+                value={form?.message}
+                onChange={handleChange}
+                className="w-full text-lg bg-gray-50 text-gray-800 border rounded outline-none transition duration-100 px-3 py-2"
+                rows="3"
+                maxLength={form.chars_left}
+              ></textarea>
+              <span className="flex justify-end">
+                {form.chars_left - form.message.length}{" "}
+                {form.message.length > form.chars_left - 2
+                  ? "character"
+                  : "characters"}{" "}
+                left
+              </span>
+            </div>
 
-          <div className="sm:col-span-2">
-            <label
-              htmlFor="color"
-              className="inline-block text-gray-800 text-sm sm:text-base mb-2"
-            >
-              Card Color*
-            </label>
-            <select
-              required
-              name="color"
-              value={form?.color}
-              onChange={handleChange}
-              className="w-full bg-gray-50 text-gray-800 border rounded outline-none transition duration-100 px-3 py-2 capitalize text-lg"
-            >
-              {colors.map((color, key) => (
-                <React.Fragment key={key}>
-                  <option value={color.value}>{color.name}</option>
-                </React.Fragment>
-              ))}
-            </select>
-          </div>
+            <div className="sm:col-span-2">
+              <label
+                htmlFor="color"
+                className="inline-block text-gray-800 text-sm sm:text-base mb-2"
+              >
+                Card Color*
+              </label>
+              <select
+                required
+                name="color"
+                value={form?.color}
+                onChange={handleChange}
+                className="w-full bg-gray-50 text-gray-800 border rounded outline-none transition duration-100 px-3 py-2 capitalize text-lg"
+              >
+                {colors.map((color, key) => (
+                  <React.Fragment key={key}>
+                    <option value={color.value}>{color.name}</option>
+                  </React.Fragment>
+                ))}
+              </select>
+            </div>
 
-          <div className="sm:col-span-2 flex justify-between items-center">
-            <button className="inline-block bg-[#ED639E] hover:bg-[#e45190] text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">
-              Send
-            </button>
-          </div>
+            <div className="sm:col-span-2 flex justify-between items-center">
+              <button className="inline-block bg-[#ED639E] hover:bg-[#e45190] text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">
+                Send
+              </button>
+            </div>
 
-          {/* <p className="text-gray-400 text-xs">
+            {/* <p className="text-gray-400 text-xs">
             By signing up to our newsletter you agree to our{" "}
             <a
               href="#"
@@ -152,9 +162,10 @@ function Submit() {
             </a>
             .
           </p> */}
-        </form>
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
