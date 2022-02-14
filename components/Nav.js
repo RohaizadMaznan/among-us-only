@@ -37,10 +37,10 @@ function Nav() {
             </a>
           </Link>
         </nav>
-        <Link href="/" passHref>
+        <Link href="/submit" passHref>
           <button
             type="button"
-            className="hidden lg:inline-block bg-[#ED639E] hover:bg-[#e45190] focus-visible:ring ring-indigo-300 text-white active:text-gray-700 text-sm md:text-base font-semibold text-center rounded outline-none transition duration-100 px-8 py-3 shadow-md"
+            className="hidden lg:inline-block bg-[#ED639E] hover:bg-[#e45190] text-white text-sm md:text-base font-semibold text-center rounded outline-none transition duration-100 px-8 py-3 shadow-md"
           >
             Submit
           </button>
@@ -72,7 +72,7 @@ function Nav() {
             <>
               <div className="origin-top-right absolute right-0 mt-2 w-80 rounded-md shadow-lg bg-gray-100 ring-1 ring-black ring-opacity-5 text-center">
                 <div
-                  className="py-1 "
+                  className="py-1"
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="options-menu"

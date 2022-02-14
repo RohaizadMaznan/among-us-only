@@ -1,4 +1,5 @@
 import { PublicLayout, Blank } from "../components/Layout";
+import { ToastProvider } from "react-toast-notifications";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
@@ -10,9 +11,11 @@ function MyApp({ Component, pageProps }) {
   const Layout = layouts[Component.layout] || ((children) => <>{children}</>);
 
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ToastProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ToastProvider>
   );
 }
 
