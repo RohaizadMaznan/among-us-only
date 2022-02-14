@@ -1,7 +1,10 @@
 import Link from "next/link";
 import React from "react";
+import Typewriter from 'typewriter-effect/dist/core';
 
 function Hero() {
+
+  
   return (
     <section className="flex flex-col items-center">
       <div className="flex items-center bg-gray-50 text-gray-500 border rounded gap-2 p-2">
@@ -23,7 +26,7 @@ function Hero() {
       </div>
 
       <div className="max-w-screen flex flex-col items-center text-center pt-8 lg:pt-20">
-        <h1 className="text-gray-800 text-4xl sm:text-5xl md:text-6xl font-bold mb-8 md:mb-12">
+        <h1 className="text-gray-800 text-4xl sm:text-5xl md:text-6xl font-bold mb-8 md:mb-12 ">
           Let the secret stay unknown among us
         </h1>
 
