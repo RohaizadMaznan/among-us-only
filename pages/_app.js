@@ -1,7 +1,6 @@
 import { PublicLayout, Blank } from "../components/Layout";
 import { ToastProvider } from "react-toast-notifications";
 import "../styles/globals.css";
-import { ToastProvider } from "react-toast-notifications";
 import { ThemeProvider } from "next-themes";
 
 function MyApp({ Component, pageProps }) {

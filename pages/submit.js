@@ -1,8 +1,4 @@
 import axios from "axios";
-<<<<<<< HEAD
-=======
-import { route } from "next/dist/server/router";
->>>>>>> 716b8fa2b2b28cae4618e2dc86d99a1c88d7b170
 import Head from "next/head";
 import { useRouter } from "next/router";
 import React, { useState } from "react";

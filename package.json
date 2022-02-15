@@ -17,12 +17,7 @@
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
     "react-toast-notifications": "^2.5.1",
-<<<<<<< HEAD
     "swr": "^1.2.1"
-=======
-    "swr": "^1.2.1",
-    "typewriter-effect": "^2.18.2"
->>>>>>> 716b8fa2b2b28cae4618e2dc86d99a1c88d7b170
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",

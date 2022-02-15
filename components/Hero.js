@@ -1,10 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import Typewriter from 'typewriter-effect/dist/core';
 
 function Hero() {
-
-  
   return (
     <section className="flex flex-col items-center">
       <div className="flex items-center bg-gray-50 text-gray-500 border rounded gap-2 p-2">
