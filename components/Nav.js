@@ -134,6 +134,25 @@ function Nav() {
                       </span>
                     </a>
                   </Link>
+
+                  <button
+                    type="button"
+                    className="text-center w-auto px-10 py-4 text-md text-gray-800 hover:text-gray-900 mx-4 rounded"
+                    role="menuitem"
+                    onClick={() =>
+                      setTheme(theme === "dark" ? "light" : "dark")
+                    }
+                  >
+                    <span className="flex flex-col">
+                      <span>
+                        {theme === "dark" ? (
+                          <MdOutlineLightMode />
+                        ) : (
+                          <MdDarkMode />
+                        )}
+                      </span>
+                    </span>
+                  </button>
                 </div>
               </div>
             </>
