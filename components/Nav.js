@@ -86,7 +86,7 @@ function Nav() {
             <>
               <div className="origin-top-right absolute right-0 mt-2 w-80 rounded-md shadow-lg bg-gray-100 ring-1 ring-black ring-opacity-5 text-center">
                 <div
-                  className="py-1 "
+                  className="py-1"
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="options-menu"

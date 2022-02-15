@@ -1,10 +1,21 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
+import Head from "next/head";
 
 function Journey() {
   return (
     <div>
+      <Head>
+        <title>
+          Journey of Among Us Only | Secret Message for Loved One Stay Secret
+        </title>
+        <meta
+          name="description"
+          content="Journey of Among Us Only | Secret Message for Loved One Stay Secret"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="py-6 sm:py-8 lg:py-12">
         <div className="max-w-screen-2xl px-4 md:px-8 mx-auto">
           <div className="w-full sm:w-96 h-96 flex justify-center items-center bg-gray-100 shadow-lg rounded-lg overflow-hidden relative mx-auto">
@@ -36,8 +47,8 @@ function Journey() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 Journey.layout = "PUBLIC";
-export default Journey
+export default Journey;
