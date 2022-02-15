@@ -23,11 +23,11 @@ function Hero() {
       </div>
 
       <div className="max-w-screen flex flex-col items-center text-center pt-8 lg:pt-20">
-        <h1 className="text-gray-800 text-4xl sm:text-5xl md:text-6xl font-bold mb-8 md:mb-12">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 md:mb-12">
           Let the secret stay unknown among us
         </h1>
 
-        <p className="text-gray-500 xl:text-lg leading-relaxed mb-8 md:mb-12">
+        <p className="dark:text-white text-gray-500 xl:text-lg leading-relaxed mb-8 md:mb-12">
           A collection of secrets only shared among us. Express your messages to
           loved one or first loves.
         </p>

@@ -3,22 +3,22 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="mb-auto bg-white pt-4 sm:pt-10 lg:pt-12">
+    <div className="mb-auto pt-4 sm:pt-10 lg:pt-12">
       <footer className="max-w-screen-2xl px-4 md:px-8 mx-auto">
-        <div className="flex flex-col items-center border-t pt-6">
+        <div className="flex flex-col items-center dark:border-0 border-t pt-6">
           <nav className="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 md:gap-6 mb-4">
             <Link href="/" passHref>
-              <a className="text-gray-500 hover:text-[#ED639E] active:text-indigo-600 transition duration-100">
+              <a className="dark:text-white text-gray-500 hover:text-[#ED639E] active:text-indigo-600 transition duration-100">
                 Archive
               </a>
             </Link>
             <Link href="/about" passHref>
-              <a className="text-gray-500 hover:text-[#ED639E] active:text-indigo-600 transition duration-100">
+              <a className="dark:text-white text-gray-500 hover:text-[#ED639E] active:text-indigo-600 transition duration-100">
                 About
               </a>
             </Link>
             <Link href="/journey" passHref>
-              <a className="text-gray-500 hover:text-[#ED639E] active:text-indigo-600 transition duration-100">
+              <a className="dark:text-white text-gray-500 hover:text-[#ED639E] active:text-indigo-600 transition duration-100">
                 Journey
               </a>
             </Link>
@@ -27,7 +27,7 @@ export default function Footer() {
             <Link href="https://www.instagram.com/rohaizadmaznan/" passHref>
               <a
                 target="_blank"
-                className="text-gray-400 hover:text-[#ED639E] active:text-gray-600 transition duration-100"
+                className="dark:text-white text-gray-400 hover:text-[#ED639E] active:text-gray-600 transition duration-100"
               >
                 <svg
                   className="w-5 h-5"
@@ -45,7 +45,7 @@ export default function Footer() {
             <Link href="https://www.linkedin.com/in/rohaizadmaznan/" passHref>
               <a
                 target="_blank"
-                className="text-gray-400 hover:text-[#ED639E] active:text-gray-600 transition duration-100"
+                className="dark:text-white text-gray-400 hover:text-[#ED639E] active:text-gray-600 transition duration-100"
               >
                 <svg
                   className="w-5 h-5"
@@ -63,7 +63,7 @@ export default function Footer() {
             <Link href="https://github.com/RohaizadMaznan" passHref>
               <a
                 target="_blank"
-                className="text-gray-400 hover:text-[#ED639E] active:text-gray-600 transition duration-100"
+                className="dark:text-white text-gray-400 hover:text-[#ED639E] active:text-gray-600 transition duration-100"
               >
                 <svg
                   className="w-5 h-5"
@@ -80,7 +80,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="text-gray-400 text-sm text-center py-8">
+        <div className="dark:text-white text-gray-400 text-sm text-center py-8">
           © 2022 - Among Us Only. All rights reserved.
         </div>
       </footer>

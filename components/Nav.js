@@ -1,8 +1,11 @@
 import Link from "next/link";
 import React, { useState } from "react";
+import { useTheme } from "next-themes";
+import { MdOutlineLightMode, MdDarkMode } from "react-icons/md";
 
 function Nav() {
   const [show, setShow] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   function NoAvailable() {
     alert("Not yet implement!");
@@ -13,7 +16,7 @@ function Nav() {
       <header className="flex justify-between items-center py-4 md:py-8 mb-4">
         <Link href="/" passHref>
           <a
-            className="inline-flex items-center text-gray-800 text-xl font-bold gap-2.5"
+            className="inline-flex items-center text-xl font-bold gap-2.5"
             aria-label="logo"
           >
             🤞🏻 Among Us Only
@@ -22,29 +25,40 @@ function Nav() {
 
         <nav className="hidden lg:flex gap-12">
           <Link href="/" passHref>
-            <a className="text-gray-800 hover:text-[#ED639E] text-lg font-semibold">
+            <a className="hover:text-[#ED639E] text-lg font-semibold">
               Archive
             </a>
           </Link>
           <Link href="/about" passHref>
-            <a className="text-gray-800 hover:text-[#ED639E] text-lg font-semibold transition duration-100">
+            <a className="hover:text-[#ED639E] text-lg font-semibold transition duration-100">
               About
             </a>
           </Link>
           <Link href="/journey" passHref>
-            <a className="text-gray-800 hover:text-[#ED639E] text-lg font-semibold transition duration-100">
+            <a className="hover:text-[#ED639E] text-lg font-semibold transition duration-100">
               Journey 🚀
             </a>
           </Link>
         </nav>
-        <Link href="/" passHref>
+
+        <div>
+          <Link href="/submit" passHref>
+            <button
+              type="button"
+              className="hidden lg:inline-block bg-[#ED639E] hover:bg-[#e45190] focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded outline-none transition duration-100 px-8 py-3 shadow-md"
+            >
+              Submit
+            </button>
+          </Link>
+
           <button
             type="button"
-            className="hidden lg:inline-block bg-[#ED639E] hover:bg-[#e45190] focus-visible:ring ring-indigo-300 text-white active:text-gray-700 text-sm md:text-base font-semibold text-center rounded outline-none transition duration-100 px-8 py-3 shadow-md"
+            className="hidden lg:inline-block items-center dark:text-white text-gray-800 text-sm md:text-lg font-semibold text-center rounded outline-none transition duration-100 px-8 py-3"
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
-            Submit
+            {theme === "dark" ? <MdOutlineLightMode /> : <MdDarkMode />}
           </button>
-        </Link>
+        </div>
 
         <div className="lg:hidden relative inline-block text-left z-10">
           <div>
