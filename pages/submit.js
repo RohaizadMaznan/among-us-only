@@ -94,7 +94,7 @@ function Submit() {
                 name="name"
                 value={form?.name}
                 onChange={handleChange}
-                className="w-full text-lg dark:bg-transparent bg-gray-50 border rounded outline-none transition duration-100 px-3 py-2"
+                className="w-full text-lg dark:text-gray-900 bg-gray-50 border rounded outline-none transition duration-100 px-3 py-2"
               />
             </div>
 
@@ -110,7 +110,7 @@ function Submit() {
                 name="message"
                 value={form?.message}
                 onChange={handleChange}
-                className="w-full text-lg dark:bg-transparent bg-gray-50 border rounded outline-none transition duration-100 px-3 py-2"
+                className="w-full text-lg dark:text-gray-900 dark:bg-gray-50 bg-gray-50 border rounded outline-none transition duration-100 px-3 py-2"
                 rows="3"
                 maxLength={form.chars_left}
               ></textarea>
@@ -135,7 +135,7 @@ function Submit() {
                 name="color"
                 value={form?.color}
                 onChange={handleChange}
-                className="w-full bg-gray-50 dark:bg-transparent border rounded outline-none transition duration-100 px-3 py-2 capitalize text-lg"
+                className="w-full bg-gray-50 dark:text-gray-900 dark:bg-gray-50 border rounded outline-none transition duration-100 px-3 py-2 capitalize text-lg"
               >
                 {colors.map((color, key) => (
                   <React.Fragment key={key}>

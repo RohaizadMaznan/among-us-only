@@ -4,7 +4,7 @@ import React from "react";
 function Hero() {
   return (
     <section className="flex flex-col items-center">
-      <div className="flex items-center bg-gray-50 text-gray-500 border rounded gap-2 p-2">
+      <div className="flex items-center dark:bg-transparent dark:text-white bg-gray-50 text-gray-500 dark:border-[#343b48] border rounded gap-2 p-2">
         <span className="bg-[#ffdbeb] text-[#ED639E] text-xs font-semibold leading-none rounded-full px-2 py-1 mt-0.5">
           New
         </span>
