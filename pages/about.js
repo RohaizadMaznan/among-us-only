@@ -1,6 +1,4 @@
-import Link from "next/link";
 import React from "react";
-import Image from "next/image";
 import Head from "next/head";
 
 function About() {
@@ -16,32 +14,65 @@ function About() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="py-6 sm:py-8 lg:py-12">
-        <div className="max-w-screen-2xl px-4 md:px-8 mx-auto">
-          <div className="w-full sm:w-96 h-96 flex justify-center items-center bg-gray-100 shadow-lg rounded-lg overflow-hidden relative mx-auto">
-            <div className="w-full h-full object-cover object-center absolute inset-0">
-              <Image
-                src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
-                alt="Maintenance picture"
-                layout="responsive"
-                width={700}
-                height={700}
-              />
-            </div>
-            <div className="flex flex-col justify-center items-center relative p-8 md:p-16">
-              <h1 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-2">
-                503
-              </h1>
 
-              <p className="text-white md:text-lg text-center mb-8">
-                The page is under construction or maintenance
+      <div class="py-6 sm:py-8 lg:py-12">
+        <div class="max-w-screen-xl px-4 md:px-8 mx-auto">
+          <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+            <div>
+              <div class="h-64 md:h-auto bg-gray-100 overflow-hidden rounded-lg shadow-lg">
+                <img
+                  src="https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&q=75&fit=crop&w=600&h=750"
+                  loading="lazy"
+                  alt="Photo by Martin Sanchez"
+                  class="w-full h-full object-cover object-center"
+                />
+              </div>
+            </div>
+
+            <div class="md:pt-8">
+              <p class="text-[#ed639e] font-bold text-center md:text-left">
+                Who we are
               </p>
 
-              <Link href="/" passHref>
-                <a className="inline-block bg-white hover:bg-gray-100 focus-visible:ring ring-indigo-300 text-gray-900 active:text-gray-700 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">
-                  Go home
-                </a>
-              </Link>
+              <h1 class="text-2xl sm:text-3xl font-bold text-center md:text-left mb-4 md:mb-6">
+                Our competitive advantage
+              </h1>
+
+              <p class="sm:text-lg mb-6 md:mb-8">
+                This is a section of some simple filler text, also known as
+                placeholder text. It shares some characteristics of a real
+                written text but is random or otherwise generated. It may be
+                used to display a sample of fonts or generate text for testing.
+                Filler text is dummy text which has no meaning however looks
+                very similar to real text.
+                <br />
+                <br />
+                This is a section of some simple filler text, also known as
+                placeholder text. It shares some characteristics of a real
+                written text but is{" "}
+                <a
+                  href="#"
+                  class=" text-indigo-500 hover:text-indigo-600 active:text-indigo-700 underline transition duration-100"
+                >
+                  random
+                </a>{" "}
+                or otherwise generated. It may be used to display a sample of
+                fonts or generate text for testing. Filler text is dummy text
+                which has no meaning however looks very similar to real text.
+              </p>
+
+              <h2 class="text-[#ed639e] text-xl sm:text-2xl font-semibold text-center md:text-left mb-2 md:mb-4">
+                About us
+              </h2>
+
+              <p class="sm:text-lg mb-6 md:mb-8">
+                This is a section of some simple filler text, also known as
+                placeholder text. It shares some characteristics of a real
+                written text but is random or otherwise generated. It may be
+                used to display a sample of fonts or generate text for testing.
+                Filler text is dummy text which has no meaning however looks
+                very similar to real text.
+              </p>
             </div>
           </div>
         </div>
