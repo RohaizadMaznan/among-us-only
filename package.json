@@ -1,6 +1,6 @@
 {
   "name": "among-us-only",
-  "version": "0.2.0",
+  "version": "v0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
