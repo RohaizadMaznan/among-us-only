@@ -22,9 +22,9 @@ function PostID({ message }) {
 
   useEffect(() => {
     if (loading) {
-      isLoading(false);
+      isLoading(false)
     }
-  });
+  }, [loading]);
 
   if (loading) return "Loading";
   if (!loading) {
