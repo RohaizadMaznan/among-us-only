@@ -3,6 +3,7 @@ FROM node:lts as dependencies
 WORKDIR /among-us-only
 COPY package.json yarn.lock ./
 RUN yarn install --frozen-lockfile
+# LABEL org.opencontainers.image.source="https://github.com/rohaizadmaznan/among-us-only"
 
 # Rebuild the source code only when needed
 FROM node:lts as builder

@@ -1,0 +1,16 @@
+name: publish
+
+on: [push]
+
+jobs:
+  publish-hello-world-image:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build among-us-only docker image
+      run: |
+        echo $CR_PAT | docker login ghcr.io -u rohaizadmaznan --password-stdin
+      env:
+        CR_PAT: ${{ secrets.CR_PAT }}
