@@ -6,13 +6,20 @@ import { useToasts } from "react-toast-notifications";
 import { server } from "../config";
 import { CARD_COLORS } from "../constant";
 
-function Submit() {
+interface IState {
+  name?: string;
+  message?: string;
+  color?: string;
+  chars_left?: number;
+}
+
+const Submit: React.FC = () => {
   const { addToast } = useToasts();
   const router = useRouter();
 
   const colors = CARD_COLORS;
 
-  const [form, setForm] = useState({
+  const [form, setForm] = useState<IState>({
     name: "",
     message: "",
     color: "",

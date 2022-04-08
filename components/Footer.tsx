@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-export default function Footer() {
+export const Footer: React.FC = () => {
   return (
     <div className="mb-auto pt-4 sm:pt-10 lg:pt-12">
       <footer className="max-w-screen-2xl px-4 md:px-8 mx-auto">
