@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import { useTheme } from "next-themes";
 import { MdOutlineLightMode, MdDarkMode } from "react-icons/md";
 
-function Nav() {
-  const [show, setShow] = useState(false);
+export const Nav: React.FC = () => {
+  const [show, setShow] = useState<boolean>(false);
   const { theme, setTheme } = useTheme();
 
   function NoAvailable() {
@@ -162,5 +162,3 @@ function Nav() {
     </>
   );
 }
-
-export default Nav;
