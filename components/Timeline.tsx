@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Timeline = () => {
+export const Timeline: React.FC = () => {
   return (
     <>
       <ol className="relative border-l border-gray-200 dark:border-gray-700">
